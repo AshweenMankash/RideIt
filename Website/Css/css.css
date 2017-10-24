@@ -1,0 +1,106 @@
+body{
+  background-color:White;
+}
+.Loader{
+  z-index:4;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  background-color:Black;
+  transition:1s ease-out;
+}
+
+.Loader h1{
+  color:White;
+  font-size: 90px;
+  position: absolute;
+  top:200px;
+  left:550px;
+}
+
+.wrapper {
+  position: absolute;
+  width: 30%;
+  bottom:50px;
+  left:550px;
+  cursor:pointer;
+  transition: transform 3s ease-out;
+}
+
+// Set the SVG to be 100% of the container
+.bike {
+  width: 100%;
+}
+
+
+
+.chain {
+  fill: none;
+  stroke: #fff;
+  stroke-width:2px;
+	stroke-dasharray: 5;
+	stroke-dashoffset: 5;
+	animation:movechain 0.2s normal linear infinite;
+}
+
+.Parallax{
+  display:fixed;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.p1{
+  background-image:url("IMG/par1.jpg");
+}
+.p2{
+  background-image:url("IMG/par2.jpg");
+}
+.p3{
+  background-image:url("IMG/par1.jpg");
+}
+
+.blank{
+  width:100%;
+  height:300px;
+}
+ul{
+  display:flex;
+}
+ul li{
+  list-style: none;
+  flex: 1;
+  flex-wrap: wrap;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius:5px;
+  text-align: center;
+}
+.options{
+  transition:1s;
+}
+.options:hover{
+cursor:pointer;
+flex:2;
+background-color: White;
+animation:option;
+animation-iteration-count: infinite;
+animation-duration: 2s;
+}
+@keyframes option{
+  0%{background-color: LightGreen;}
+  25%{background-color: LightYellow;}
+  50%{background-color:khaki;}
+  75%{background-color: LightBlue;}
+  100%{background-color:lightGreen;}
+}
+
+@keyframes movechain {
+	from {
+		stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 10;
+  }
+}
